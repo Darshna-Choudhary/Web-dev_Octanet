@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(robo2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Example of reducing font size for smaller screens */
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10%;
+    background: rgb(206, 189, 189);
+    backdrop-filter: blur(10px);
+    display: absolute;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #030303;
+    z-index: 100;
+    box-shadow: 0 3px 35px rgba(255, 246, 246, 0.863);
+}
+
+.logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    letter-spacing: 2.5px;
+}
+
+.logo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 1000;
+    cursor: default;
+    gap: 10px;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+li {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
+    transition: .3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar a {
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+
+.nav-logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: brown;
+}
+
+.nav-menu {
+    text-decoration: none;
+    color: rgb(15, 14, 12);
+    font-size: 0.85em;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.4 linear 0s;
+}
+
+.nav-menu:hover {
+    border-bottom: 2px solid chocolate;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(blur);
+}
+
+.log {
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button1 {
+    padding: 1em;
+    width: 8em;
+    border-radius: 0.5em;
+    background-color: brown;
+    color: white;
+    border: 1px solid black;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid rebeccapurple;
+}
+
+.head-section {
+    background-image: url(robo2.jpg);
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(3, 4, 54);
+    background-size: cover;
+}
+
+.head-content {
+    margin: 50px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-content h1 {
+    margin: 200px;
+    color: black;
+    margin-bottom: 0.5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1000;
+    letter-spacing: 1px;
+}
+
+.content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    font-size: large;
+    letter-spacing: 2px;
+    color: rgb(10, 16, 73);
+}
+
+.head-content p {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(10, 16, 73);
+    font-weight: 1000;
+}
+
+.explore {
+    padding: 0.5em;
+    width: 10em;
+    border-radius: 0.5em;
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid rgb(112, 88, 88);
+}
+
+.explore:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.explore p {
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.foot-panel {
+    height: 150px;
+    background-color: #393b4b;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul a {
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5em;
+    color: whitesmoke;
+    padding: 0 10vh;
+    bottom: 5%;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon img {
+    width: 50%;
+    height: 10px;
+}
