@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header.container {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px;
+    width: 180px;
+}
+
+.logo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: default; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+li {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+body {
+    background-image: url(plain\ table.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+input {
+    display:flex;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#cover {
+    width: 400px;
+    height: 500px;
+}
+
+.flip-book {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.flip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: inherit;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+    color: #000;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0 13px;
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 2px 5px rgba(0, 0, 0, .5);
+}
+.mains {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content .container {
+    justify-content: center;
+    display: block;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+    height: 100%;
+}
+
+.todotask {
+    cursor: pointer 6 19;
+    display: block;
+    padding: 15px;
+}
+
+.tasks {
+    cursor: inherit;
+    background: thistle;
+    border: none;
+    outline: none;
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 500;
+    flex-grow: 1;
+    border-bottom: transparent;
+}
+
+.checkbox {
+    cursor: inherit;
+    width: 14px;
+    height: 14px;
+}
+
+.todotask:has(.checkbox:checked) {
+    color: cadetblue;
+    background: rgba(222, 184, 135, 0.479);
+    text-decoration: wavy;
+    order: 1;
+}
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotate(180deg);
+    backface-visibility:hidden;
+    background-color: #000;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 13px;
+    right: 1em;
+    cursor: pointer;
+    color: black;
+}
+.back-butn {
+    position: absolute;
+    bottom: 13px;
+    left: 1em;
+    cursor: pointer;
+    color: black;
+}
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+#c1:checked~.flip-book #p1 {
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+#c2:checked~.flip-book #p2 {
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+#c3:checked~.flip-book #p3 {
+    transform: rotate(180deg);
+    z-index: 3;
+}
+
